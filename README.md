@@ -1,6 +1,3 @@
-> [!IMPORTANT]
-> The repository and README are under development.
-
 <h1 align="center">Web Applications Development I - UDESC</h1>
 <div align="center"><i>A complete list of solved exercises</i><br><br>
 <a href="https://github.com/mateusadada/web1-udesc/stargazers"><img src="https://img.shields.io/github/stars/mateusadada/web1-udesc" alt="Stars Badge"/></a>
@@ -24,44 +21,29 @@
 
 ## 🚀 Starting
 
-> [!NOTE]
-> In development
+This project was developed as part of the WEB 1 course at UDESC, focusing on the fundamentals of web programming. The system encompasses exercises and concepts introduced during the course, such as creating and structuring HTML documents, utilizing CSS for styling, and implementing interactivity with JavaScript.  
 
-This database project is designed to address the operational challenges faced by Confeitaria Dona Lúcia, providing a solution for managing various aspects of the business. The system ensures control of ingredients by recording information such as descriptions, quantities, brands, and units of measurement. Supplier orders are tracked, including data on quantities purchased, unit prices, and total order values, ensuring a stock overview. Furthermore, the system integrates recipe management, enabling the storage and retrieval of preparation methods, preparation times, yields, and required ingredients, streamlining updates and access to information.  
-
-The project also supports sales tracking, associating each transaction with specific products, quantities, and purchase dates. Product pricing dynamically considers ingredient costs and desired profit margins, ensuring financial stability.
+The project includes hands-on activities like designing forms, embedding multimedia elements, and managing the layout using the box model. JavaScript exercises cover control structures, functions, event handling, and object manipulation. Additionally, basic server-side programming with PHP is introduced, allowing for tasks like form processing, data storage, and database interactions. This foundational work builds the essential skills required for modern web development.
 
 ## 📚 Features
 
-> [!NOTE]
-> In development
-
 Used during the evolution of the final project:
 
-- **User/Permission Management**: CRUD operations for managing users and permissions.
-- **Table Creation**: Design and create tables for all business aspects.
-- **CRUD with MySQL**: Perform CRUD operations on all data tables using MySQL.
-- **SQL Joins**: Use INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN to manage relationships between tables.
-- **Additional SQL Features**: Implement advanced SQL features like subqueries and indexing for improved performance.
+- HTML 5: Forms, audio, and video integration.  
+- CSS: Formatting (colors, backgrounds, fonts), element grouping, and the box model.  
+- Client-side development (JavaScript): Control structures, functions, arrays, objects, and event handling.  
+- Server-side development (PHP): Data types, operators, conditional structures, loops, strings, regular expressions, form processing, file handling, and database manipulation.
 
 ## 📋 Prerequisites
 
-> [!NOTE]
-> In development
-
-To run this project, ensure the following prerequisites are met:
-
-- **Database Setup**: Install MySQL on your machine and set up the database using the provided scripts.
-- **Java Environment**: Have Java installed (version 22 or higher) to support the execution of the graphical interface.
-- **Executable File**: Use the provided `.bat` file to launch the graphical interface, which allows interaction with the database through features like CRUD operations and data analysis.
+No software installation on your computer is required; simply access the site directly through your browser. This approach ensures convenience and immediate access to the system's features and information. The site is compatible with modern browsers such as Chrome, Firefox, and Edge, and does not require additional updates or plug-ins for basic functionality.
 
 ## 🛠️ Built with
 
-> [!NOTE]
-> In development
-
-* [Java](https://www.java.com/) - The programming language used.
-* [MySQL](https://www.mysql.com/) - Used to handle the databases.
+* [HTML5](https://en.wikipedia.org/wiki/HTML5) - Used to structure the page content, defining the elements and their hierarchical organization.
+* [CSS3](https://en.wikipedia.org/wiki/CSS) - Employed to style and visually enhance HTML elements, such as colors, fonts, sizes, positioning, and animations.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Utilized to add interactivity to the page, allowing manipulation of the DOM, creation of events, and execution of functions.
+* [PHP](https://en.wikipedia.org/wiki/PHP) - Used for server-side scripting, enabling dynamic content generation, form handling, and communication with databases. 
 
 ## ✒️ Author
 
