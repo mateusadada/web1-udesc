@@ -31,8 +31,8 @@ Used during the evolution of the final project:
 
 - HTML 5: Forms, audio, and video integration.  
 - CSS: Formatting (colors, backgrounds, fonts), element grouping, and the box model.  
-- Client-side development (JavaScript): Control structures, functions, arrays, objects, and event handling.  
-- Server-side development (PHP): Data types, operators, conditional structures, loops, strings, regular expressions, form processing, file handling, and database manipulation.
+- JavaScript: Control structures, functions, arrays, objects, and event handling.  
+- PHP: Data types, operators, conditional structures, loops, strings, regular expressions, form processing, file handling, and database manipulation.
 
 ## 📋 Prerequisites
 
