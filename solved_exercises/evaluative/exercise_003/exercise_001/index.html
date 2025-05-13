@@ -1,0 +1,36 @@
+<!-- Crie uma página com script em JavaScript que lê 5 inteiros do teclado e armazena-os num vetor.
+    Depois percorre este vetor mostrando os números ímpares. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>exercise_001</title>
+</head>
+
+<body>
+    <h2>Digite 5 números inteiros:</h2>
+    <input type="number" id="num1"><br>
+    <input type="number" id="num2"><br>
+    <input type="number" id="num3"><br>
+    <input type="number" id="num4"><br>
+    <input type="number" id="num5"><br><br>
+    <button onclick="mostrarImpares()">Mostrar ímpares</button>
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarImpares() {
+        const numeros = [
+            parseInt(document.getElementById("num1").value),
+            parseInt(document.getElementById("num2").value),
+            parseInt(document.getElementById("num3").value),
+            parseInt(document.getElementById("num4").value),
+            parseInt(document.getElementById("num5").value)
+    ];
+        const impares = numeros.filter(n => n % 2 !== 0);
+        document.getElementById("resultado").innerText = "Números ímpares: " + impares.join(", ");
+    }
+    </script>
+</body>
+</html>

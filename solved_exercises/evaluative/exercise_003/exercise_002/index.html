@@ -1,0 +1,44 @@
+<!-- Crie uma página com script em JavaScript que lê e armazena num vetor 5 números reais fornecidos pelo usuário e chama a função media()
+    para imprimir a média dos valores. A função media() recebe um vetor e retorna a média dos valores -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>exercise_002</title>
+</head>
+
+<body>
+    <h2>Digite 5 números reais:</h2>
+    <input type="number" step="any" id="num1"><br>
+    <input type="number" step="any" id="num2"><br>
+    <input type="number" step="any" id="num3"><br>
+    <input type="number" step="any" id="num4"><br>
+    <input type="number" step="any" id="num5"><br><br>
+    <button onclick="calcularMedia()">Calcular média</button>
+    <p id="resultado"></p>
+
+    <script>
+        function media(vetor) {
+        let soma = 0;
+        for (let i = 0; i < vetor.length; i++) {
+        soma += vetor[i];
+    }
+        return soma / vetor.length;
+    }
+
+    function calcularMedia() {
+        const numeros = [
+            parseFloat(document.getElementById("num1").value),
+            parseFloat(document.getElementById("num2").value),
+            parseFloat(document.getElementById("num3").value),
+            parseFloat(document.getElementById("num4").value),
+            parseFloat(document.getElementById("num5").value)
+    ];
+        const resultado = media(numeros);
+        document.getElementById("resultado").innerText = "Média: " + resultado.toFixed(2);
+    }
+    </script>
+</body>
+</html>
