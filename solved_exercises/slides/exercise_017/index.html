@@ -1,1 +1,104 @@
 <!-- Tag <table> -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise_017</title>
+    <style>
+        tr:nth-child(even) {
+            background-color: #D6EEEE;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Exemplo 1 -->
+    <table width="200" border="1" cellspacing="2" cellpadding="1" bgcolor="#F9FF" bordercolor="cyan">
+        <tr>
+            <td align="center">Célula com duas linhas de conteúdo</td>
+            <td valign="bottom">Coluna</td>
+        </tr>
+    </table><br>
+
+    <!-- Exemplo 2 -->
+    <table border="1" width="50%">
+        <tr align="center">
+            <td rowspan="2">Produto</td>
+            <td colspan="2">Preço</td>
+        </tr>
+
+        <tr align="center">
+            <td>Sem desc.</td>
+            <td>Com desc.</td>
+        </tr>
+
+        <tr align="center">
+            <td>HD</td>
+            <td>200,00</td>
+            <td>175,00</td>
+        </tr>
+
+        <tr align="center">
+            <td>Pendrive</td>
+            <td>180,00</td>
+            <td>160,00</td>
+        </tr>
+    </table><br>
+
+    <!-- Exemplo 3 -->
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>coluna 1</th>
+            <th>coluna 2</th>
+            <th>coluna 3</th>
+        </tr>
+
+        <tr>
+            <td>texto</td>
+            <td>texto</td>
+            <td>texto</td>
+        </tr>
+
+        <tr>
+            <td>texto</td>
+            <td>texto</td>
+            <td>texto</td>
+        </tr>
+    </table><br>
+
+    <!-- Exemplo 4 -->
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Pontos</th>
+        </tr>
+
+        <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+            <td>$100</td>
+        </tr>
+
+        <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+            <td>$150</td>
+        </tr>
+
+        <tr>
+            <td>Joe</td>
+            <td>Swanson</td>
+            <td>$300</td>
+        </tr>
+
+        <tr>
+            <td>Cleveland</td>
+            <td>Brown</td>
+            <td>$250</td>
+        </tr>
+    </table>
+</body>
+</html>
