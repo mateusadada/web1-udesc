@@ -1,1 +1,53 @@
-<!-- Tag <div> -->
+<!-- Formulário com novos controles de entrada de dados e validação -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise_022</title>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <label for="favcolor">Select your favorite color:</label>
+        <input id="favcolor" type="color" name="favcolor"><br><br>
+
+        <label for="date_birth">Birthday:</label>
+        <input type="date" name="date_birth" id="date_birth"><br><br>
+
+        <label for="bdaytime">Birthday (date and time):</label>
+        <input type="datetime-local" name="bdaytime" id="bdaytime"><br><br>
+
+        <label for="month">Month:</label>
+        <input type="month" name="month" id="month"><br><br>
+
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email"><br><br>
+
+        <label for="number">Choose a number:</label>
+        <input type="number" name="number" id="number" min="0" max="10" step="2" value="6"><br><br>
+
+        <label for="points">Points: 0</label>
+        <input type="range" name="points" id="points" min="1" max="10"> 10<br><br>
+
+        <label for="search">Search Google:</label>
+        <input type="search" name="search" id="search"><br><br>
+
+        <label for="tel">Telephone:</label>
+        <input type="tel" name="tel" id="tel" pattern="\([0-9]{2}\)[0-9]{4,5}-[0-9]{4}"><br><br>
+
+        <label for="time">Time:</label>
+        <input type="time" name="time" id="time"><br><br>
+
+        <label for="url">URL:</label>
+        <input type="url" name="url" id="url"><br><br>
+
+        <label for="week">Week:</label>
+        <input type="week" name="week" id="week"><br><br>
+
+        <input type="submit">
+        <input type="reset">
+    </form>
+</body>
+</html>
