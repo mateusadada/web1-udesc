@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modelo de eventos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .calculadora {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 70px;
+            padding: 8px;
+            margin: 0 5px;
+            text-align: right;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            border: 1px solid #777;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+
+        #soma {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .ajuda {
+            margin-top: 15px;
+            height: 20px;
+            font-style: italic;
+            color: #333;
+        }
+
+        .color-test-section {
+            margin-top: 20px;
+        }
+
+        .color-box-container {
+            margin-top: 5px;
+        }
+
+        .color-box {
+            width: 50px;
+            height: 25px;
+            display: inline-block;
+            margin: 0 5px;
+            cursor: pointer;
+            border: 1px solid #000;
+            vertical-align: middle;
+        }
+
+        .red { background-color: red; }
+        .yellow { background-color: yellow; }
+        .blue { background-color: blue; }
+    </style>
+</head>
+<body>
+
+<div class="calculadora">
+    <h1>SOMA</h1>
+
+    <div>
+        <input type="text" id="operando1">
+        <span>+</span>
+        <input type="text" id="operando2">
+        <button id="calculateBtn">=</button>
+        <span id="soma">0</span>
+    </div>
+
+    <div class="ajuda">
+        Ajuda: <span id="mensagemAjuda"></span>
+    </div>
+
+    <div class="color-test-section">
+        Testando cor do texto
+        <div class="color-box-container">
+            <div class="color-box red" id="colorRed"></div>
+            <div class="color-box yellow" id="colorYellow"></div>
+            <div class="color-box blue" id="colorBlue"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const operando1Input = document.getElementById('operando1');
+    const operando2Input = document.getElementById('operando2');
+    const calculateBtn = document.getElementById('calculateBtn');
+    const somaSpan = document.getElementById('soma');
+    const mensagemAjudaSpan = document.getElementById('mensagemAjuda');
+    const colorRedDiv = document.getElementById('colorRed');
+    const colorYellowDiv = document.getElementById('colorYellow');
+    const colorBlueDiv = document.getElementById('colorBlue');
+
+    window.onload = function() {
+        alert("Calcula soma");
+    };
+
+    function handleInputFocus(event) {
+        mensagemAjudaSpan.textContent = "informe um operando";
+        event.target.style.backgroundColor = 'lightblue';
+    }
+
+    function handleInputBlur(event) {
+        if (document.activeElement !== operando1Input && document.activeElement !== operando2Input) {
+            mensagemAjudaSpan.textContent = "";
+        }
+        event.target.style.backgroundColor = 'white';
+    }
+
+    operando1Input.onfocus = handleInputFocus;
+    operando2Input.onfocus = handleInputFocus;
+
+    operando1Input.onblur = handleInputBlur;
+    operando2Input.onblur = handleInputBlur;
+
+    calculateBtn.onclick = function() {
+        const value1 = parseFloat(operando1Input.value);
+        const value2 = parseFloat(operando2Input.value);
+
+        const num1 = isNaN(value1) ? 0 : value1;
+        const num2 = isNaN(value2) ? 0 : value2;
+
+        somaSpan.textContent = num1 + num2;
+    };
+
+    function changeResultTextColor(color) {
+        somaSpan.style.color = color;
+    }
+
+    colorRedDiv.onmouseover = function() {
+        changeResultTextColor('red');
+    };
+
+    colorYellowDiv.onmouseover = function() {
+        changeResultTextColor('darkgoldenrod');
+    };
+
+    colorBlueDiv.onmouseover = function() {
+        changeResultTextColor('blue');
+    };
+
+    function revertResultTextColor() {
+        changeResultTextColor('black');
+    }
+
+    colorRedDiv.onmouseout = revertResultTextColor;
+    colorYellowDiv.onmouseout = revertResultTextColor;
+    colorBlueDiv.onmouseout = revertResultTextColor;
+
+</script>
+
+</body>
+</html>
