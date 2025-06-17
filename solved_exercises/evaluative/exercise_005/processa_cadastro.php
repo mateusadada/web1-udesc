@@ -42,11 +42,11 @@
         }
     }
 
-    if (!empty($telefone) && !preg_match("/^\([0-9]{2}\)[0-9]{4}-[0-9]{4}$/", $telefone)) { [cite: 96]
+    if (!empty($telefone) && !preg_match("/^\([0-9]{2}\)[0-9]{4}-[0-9]{4}$/", $telefone)) {
         $erros[] = "Telefone inválido. Use o formato (DD)DDDD-DDDD.";
     }
 
-    if (!empty($url_pagina_pessoal) && !filter_var($url_pagina_pessoal, FILTER_VALIDATE_URL)) { [cite: 74]
+    if (!empty($url_pagina_pessoal) && !filter_var($url_pagina_pessoal, FILTER_VALIDATE_URL)) {
         $erros[] = "URL da página pessoal inválida.";
     }
 
