@@ -1,0 +1,7 @@
+body {
+    background-color: yellow;
+    background-image: url(taz.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
