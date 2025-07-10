@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>exercise_001</title>
+</head>
+
+<body>
+    <h1>Cálculo de média</h1>
+    <p>Este script irá calcular a média de 5 números e informar se é igual, menor ou maior que 7.</p>
+    <button onclick="calcularMedia()">Calcular média</button>
+    <p id="resultadoMedia"></p>
+
+    <script>
+        function calcularMedia() {
+            let soma = 0;
+            const quantidade = 5;
+
+            for (let i = 1; i <= quantidade; i++) {
+                let numero = parseFloat(prompt(`Digite o ${i}º número:`));
+                // Verifica se o número é válido
+                while (isNaN(numero)) {
+                    numero = parseFloat(prompt(`Entrada inválida. Digite o ${i}º número novamente:`));
+                }
+                soma += numero;
+            }
+
+            const media = soma / quantidade;
+            let mensagem = `A média dos números é: ${media.toFixed(2)}. `;
+
+            if (media === 7) {
+                mensagem += "A média é igual a 7.";
+            } else if (media < 7) {
+                mensagem += "A média é menor que 7.";
+            } else {
+                mensagem += "A média é maior que 7.";
+            }
+
+            document.getElementById("resultadoMedia").innerText = mensagem;
+        }
+    </script>
+</body>
+</html>
