@@ -1,0 +1,5 @@
+Exercício 1) Crie uma página com script em JavaScript que lê 5 inteiros do teclado e armazena-os num vetor. Depois percorre este vetor mostrando os números ímpares.
+
+Exercício 2) Crie uma página com script em JavaScript que lê e armazena num vetor 5 números reais fornecidos pelo usuário e chama a função media() para imprimir a média dos valores. A função media() recebe um vetor e retorna a média dos valores.
+
+Exercício 3) Escrever um programa que leia 5 números reais, armazenando-os em um vetor, e imprima-os em ordem inversa, sem alterar a posição dos valores dentro do vetor.

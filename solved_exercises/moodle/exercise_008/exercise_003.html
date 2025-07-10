@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>exercise_003</title>
+</head>
+
+<body>
+    <h1>Validação de idade (mínimo 18 anos)</h1>
+    <form onsubmit="return validarIdade()">
+        <label for="dataNascimento">Data de nascimento:</label>
+        <input type="date" id="dataNascimento" name="dataNascimento" required><br><br>
+        <button type="submit">Verificar idade</button>
+    </form>
+    <p id="mensagemIdade"></p>
+
+    <script>
+        function validarIdade() {
+            const inputDataNascimento = document.getElementById("dataNascimento");
+            const dataNascimentoStr = inputDataNascimento.value;
+            const mensagemElement = document.getElementById("mensagemIdade");
+
+            if (!dataNascimentoStr) {
+                mensagemElement.innerText = "Por favor, insira sua data de nascimento.";
+                mensagemElement.style.color = "red";
+                return false;
+            }
+
+            const dataNascimento = new Date(dataNascimentoStr);
+            const hoje = new Date();
+
+            let idade = hoje.getFullYear() - dataNascimento.getFullYear();
+            const mesAtual = hoje.getMonth();
+            const diaAtual = hoje.getDate();
+            const mesNascimento = dataNascimento.getMonth();
+            const diaNascimento = dataNascimento.getDate();
+
+            if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
+                idade--;
+            }
+
+            if (idade >= 18) {
+                mensagemElement.innerText = `Sua idade é ${idade} anos. Validação OK!`;
+                mensagemElement.style.color = "green";
+                return true;
+            } else {
+                mensagemElement.innerText = `Você tem ${idade} anos. É necessário ter pelo menos 18 anos.`;
+                mensagemElement.style.color = "red";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

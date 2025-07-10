@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>exercise_003</title>
+</head>
+
+<body>
+    <h1>Contagem por faixa etária</h1>
+    <p>Este script irá contar pessoas com menos de 21 anos e mais de 50 anos. Digite um número negativo para finalizar.</p>
+    <button onclick="contarIdades()">Iniciar Contagem</button>
+    <p id="resultadoIdades"></p>
+
+    <script>
+        function contarIdades() {
+            let menos21 = 0;
+            let mais50 = 0;
+            let idade;
+
+            alert("Digite as idades das pessoas. Digite um número negativo para finalizar.");
+
+            while (true) {
+                idade = parseInt(prompt("Digite a idade da pessoa:"));
+
+                if (idade < 0) {
+                    break;
+                }
+
+                if (isNaN(idade)) {
+                    alert("Entrada inválida. Por favor, digite um número para a idade.");
+                    continue;
+                }
+
+                if (idade < 21) {
+                    menos21++;
+                } else if (idade > 50) {
+                    mais50++;
+                }
+            }
+
+            document.getElementById("resultadoIdades").innerText = `
+                Total de pessoas com menos de 21 anos: ${menos21}\n
+                Total de pessoas com mais de 50 anos: ${mais50}
+            `;
+        }
+    </script>
+</body>
+</html>
