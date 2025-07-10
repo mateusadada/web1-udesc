@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>exercise_001</title>
+</head>
+
+<body>
+    <h1>Quadrado do menor e raiz do maior</h1>
+    <button onclick="calcularValores()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularValores() {
+            let valor1 = parseFloat(prompt("Digite o primeiro valor:"));
+            let valor2 = parseFloat(prompt("Digite o segundo valor:"));
+
+            if (isNaN(valor1) || isNaN(valor2)) {
+                document.getElementById("resultado").innerText = "Por favor, digite valores numéricos válidos.";
+                return;
+            }
+
+            let menor, maior;
+
+            if (valor1 < valor2) {
+                menor = valor1;
+                maior = valor2;
+            } else {
+                menor = valor2;
+                maior = valor1;
+            }
+
+            const quadradoDoMenor = menor * menor;
+            const raizDoMaior = Math.sqrt(maior);
+
+            document.getElementById("resultado").innerText = `
+                O quadrado do menor número (${menor}) é: ${quadradoDoMenor}\n
+                A raiz quadrada do maior número (${maior}) é: ${raizDoMaior.toFixed(2)}
+            `;
+        }
+    </script>
+</body>
+</html>

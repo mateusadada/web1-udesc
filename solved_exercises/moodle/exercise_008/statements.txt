@@ -1,0 +1,7 @@
+Exercício 1) Criar uma página web com código JS que solicite dois valores para o usuário e retorna o quadrado do menor número e a raiz quadrada do maior número.
+
+Exercício 2) Criar um script com new Date (AAAA, MM, DD, 0, 0, 0) com sua data de nascimento e mostrar o dia da semana que você nasceu.
+
+Exercício 3) Alterar validação da Data de Nascimento da aula 11 (idade mínima 18 anos) para validar dinamicamente.
+
+Exercício 4) A área A de um círculo é calculada por: A = PI * (raio * raio), sendo PI=3,1415. Crie uma classe chamada 'circulo' com o atributo 'raio' e método 'area'. O raio é informado pelo usuário. O método 'area' retorna a área do círculo. Crie um objeto desta classe. Peça ao usuário o raio de um círculo e informe sua área chamando o método 'area' do objeto. Utilize atributos e métodos do objeto Math.

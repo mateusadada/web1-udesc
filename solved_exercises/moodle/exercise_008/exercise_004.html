@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>exercise_004</title>
+</head>
+<body>
+    <h1>Cálculo da área do círculo</h1>
+    <button onclick="calcularAreaCirculo()">Calcular área</button>
+    <p id="resultadoArea"></p>
+
+    <script>
+        class Circulo {
+            constructor(raio) {
+                this.raio = raio;
+            }
+
+            area() {
+                return Math.PI * Math.pow(this.raio, 2);
+            }
+        }
+
+        function calcularAreaCirculo() {
+            let raioInput = prompt("Digite o raio do círculo:");
+            let raio = parseFloat(raioInput);
+
+            if (isNaN(raio) || raio < 0) {
+                document.getElementById("resultadoArea").innerText = "Por favor, digite um valor de raio numérico e positivo.";
+                return;
+            }
+
+            const meuCirculo = new Circulo(raio);
+            const areaCalculada = meuCirculo.area();
+
+            document.getElementById("resultadoArea").innerText = `
+                O raio informado é: ${raio}\n
+                A área do círculo é: ${areaCalculada.toFixed(4)}
+            `;
+        }
+    </script>
+</body>
+</html>

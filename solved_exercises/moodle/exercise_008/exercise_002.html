@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>exercise_002</title>
+</head>
+
+<body>
+    <h1>Dia da semana do nascimento</h1>
+    <p>Descubra em qual dia da semana você nasceu!</p>
+    <button onclick="mostrarDiaDaSemanaNascimento()">Descobrir</button>
+    <p id="diaSemanaNascimento"></p>
+
+    <script>
+        function mostrarDiaDaSemanaNascimento() {
+            const dataNascimento = new Date(2001, 10, 8, 0, 0, 0);
+
+            const diasDaSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+            const diaDaSemana = diasDaSemana[dataNascimento.getDay()];
+
+            document.getElementById("diaSemanaNascimento").innerText = `Você nasceu em um(a) ${diaDaSemana}.`;
+        }
+    </script>
+</body>
+</html>
